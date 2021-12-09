@@ -7,16 +7,15 @@
   margin-right: auto;
 }
 
-.font-lato {
-  font-family: "Lato";
-}
-
 .font-raleway {
   font-family: "Raleway";
 }
 
 .btn {
   transition: color 0.3s;
+  font-size: 12px;
+  color: #f2f2f2;
+  background-color: #74cfae;
 }
 
 .btn:hover {
@@ -25,6 +24,11 @@
 
 a {
   display: inline-block;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Lato";
 }
 
 /* 共通 */
@@ -37,39 +41,35 @@ a {
   /* positionには必須 */
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 100000;
 }
 
 .header-inner {
   display: flex;
   /* 両端に子要素を配置できる */
   justify-content: space-between;
-  align-items: center;
   padding: 15px 0;
-  position: relative;
 }
 
 /* 子要素全てにposition: absolute;をつけると、親要素内が空と判断され崩れる */
 .bolt-icon {
   color: #4e4e4e;
-  font-size: 3em;
+  font-size: 40px;
 }
 
 .contact {
-  color: #f2f2f2;
-  background-color: #74cfae;
-  font-size: 12px;
   padding: 14px 12px;
-  text-decoration: none;
 }
 
 /* メイン */
 
+.main {
+  padding-top: 78px;
+}
+
 /* タイトル */
 .title {
   background-color: #f2f2f2;
-  width: 100%;
-  padding-top: 78px;
 }
 
 .title-inner {
@@ -77,55 +77,47 @@ a {
   padding: 250px 0;
 }
 
-.title-text {
-  margin-top: 20px;
-}
-
-.title-text:first-child {
-  margin-top: 0;
-}
-
-.title-inner h1 {
+.title-head {
   font-size: 90px;
   font-weight: 700;
   color: #74cfae;
 }
 
-.title-inner h5 {
+.title-text {
   font-size: 30px;
   color: #c0c0c0;
+  margin-top: 20px;
 }
 
 /* 紹介 */
 
 .intro {
   background-color: #74cfae;
-  width: 100%;
 }
 
 .intro-inner {
   display: flex;
   padding-top: 50px;
+  padding-left: 70px;
 }
 
 /* 画像にvertical-alignを指定すると隙間がなくなる */
-.intro-image img {
-  margin-left: 80px;
+.iphon {
   vertical-align: bottom;
 }
 
 .intro-text-box {
+  width: 60%;
   text-align: center;
-  margin-left: 170px;
+  margin-left: 100px;
 }
 
-.intro-text h3 {
+.intro-title {
   font-size: 24px;
   color: #f2f2f2;
 }
 
-.intro-text h5 {
-  width: 680px;
+.intro-text {
   font-size: 20px;
   color: #f2f2f2;
   margin-top: 35px;
@@ -136,11 +128,10 @@ a {
 
 .work {
   background-color: #f2f2f2;
-  width: 100%;
 }
 
 .work-inner {
-  padding: 60px 0 70px 0;
+  padding: 60px 0 70px;
 }
 
 .work-title {
@@ -156,6 +147,7 @@ a {
 
 .work-images li {
   margin-left: 100px;
+  margin-top: 80px;
   opacity: 0.7;
   transition: opacity 0.3s;
   font-size: 0;
@@ -165,16 +157,12 @@ a {
   opacity: 1;
 }
 
-.work-images li:nth-child(1) {
+.work-images li:nth-child(3n + 1) {
   margin-left: 0;
 }
 
-.work-images li:nth-child(4) {
-  margin-left: 0;
-}
-
-.work-images li:nth-child(n + 4) {
-  margin-top: 80px;
+.work-images li:nth-child(-n + 3) {
+  margin-top: 0;
 }
 
 .flex {
@@ -190,7 +178,6 @@ a {
   line-height: 1.5em;
 }
 
-/* 質問 */
 .email {
   display: flex;
   justify-content: center;
@@ -198,11 +185,7 @@ a {
   width: 100px;
   height: 45px;
   margin-left: 90px;
-  color: #f2f2f2;
-  font-size: 12px;
   padding: 14px 20px;
-  background-color: #74cfae;
-  text-decoration: none;
   box-sizing: border-box;
 }
 
@@ -257,40 +240,33 @@ a {
   padding-bottom: 200px;
 }
 
-.sns-inner ul {
+.sns-icons {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* 質問 */
-.sns-inner li a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.sns-icon {
+  text-align: center;
+  width: 185px;
   font-size: 3em;
   color: #74cfae;
-  width: 185px;
-  background-color: #f2f2f2;
   transition: background-color 0.3s;
-  text-decoration: none;
   padding: 30px 0;
-  box-sizing: border-box;
 }
 
-.sns-inner li a:hover {
+.sns-icon:hover {
   background-color: white;
 }
 
 /* フッター */
 .footer {
   background-color: #74cfae;
-  width: 100%;
 }
 
-.footer-inner h5 {
+.footer-text {
   color: #f2f2f2;
-  padding: 20px 0 25px 0;
+  padding: 20px 0 25px;
   text-align: right;
 }
 
